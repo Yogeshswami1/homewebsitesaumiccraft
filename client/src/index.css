@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%); /* Start with the content offscreen to the right */
+    }
+    100% {
+      transform: translateX(-100%); /* Move the content fully offscreen to the left */
+    }
+  }
+
+  .animate-marquee {
+    animation: marquee 60s linear infinite;
+    /* Use flex to ensure smooth spacing and horizontal scrolling */
+    display: inline-flex;
+    white-space: nowrap;
+    width: 100%; /* Set width to ensure smooth animation */
+  }
+
+  .animate-marquee:hover {
+    animation-play-state: paused;
+  }
+}

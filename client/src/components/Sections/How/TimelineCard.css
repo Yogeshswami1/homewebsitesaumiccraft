@@ -1,0 +1,229 @@
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+}
+
+/* Card Wrapper Styling */
+.card-wrapper {
+  background: linear-gradient(145deg, #f0f0f0, #d1d1d1); /* Light chrome gradient */
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  box-shadow: 0 8px 65px rgba(0, 0, 0, 0.2); /* Softer shadow */
+  border-radius: 12px;
+  border: 2px solid #b0b0b0; /* Light chrome border */
+}
+
+.card-content {
+  padding: 30px;
+}
+
+.header-info {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.header-info h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333; /* Dark grey text */
+}
+
+.header-info p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #666; /* Medium grey text */
+}
+
+/* Responsive Text Scaling */
+@media (max-width: 768px) {
+  .header-info h1 {
+    font-size: 2rem;
+  }
+
+  .header-info p {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-info h1 {
+    font-size: 1.5rem;
+  }
+
+  .header-info p {
+    font-size: 0.75rem;
+  }
+}
+
+/* Timeline Wrapper */
+.timeline-wrapper {
+  width: 100%;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin-bottom: 50px;
+  padding: 20px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+  background: linear-gradient(145deg, #e5e5e5, #c0c0c0); /* Subtle chrome finish */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+
+.timeline-item.reverse {
+  flex-direction: row-reverse;
+}
+
+.timeline-item.visible {
+  animation: fadeIn 1s forwards;
+}
+
+.timeline-item:not(.visible) {
+  animation: fadeOut 1s forwards;
+}
+
+/* Text and Image Styling */
+.text-content {
+  width: 45%;
+  padding: 20px;
+  color: #333; /* Dark grey text */
+}
+
+.text-content h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #333; /* Dark grey text */
+}
+
+.text-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #666; /* Medium grey text */
+}
+
+.image-content {
+  width: 45%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-content img {
+  width: 80%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Darker shadow for more depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-content:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* More pronounced shadow on hover */
+}
+
+/* Responsive Layout for Smaller Screens */
+@media (max-width: 768px) {
+  .timeline-item {
+    flex-direction: column; /* Stack elements vertically */
+    text-align: center;
+    margin-bottom: 30px; /* Reduce spacing */
+    padding: 10px; /* Reduce padding */
+  }
+  
+  .text-content,
+  .image-content {
+    width: 100%;
+    margin: 0; /* Reset margins */
+    padding: 10px; /* Adjust padding */
+  }
+
+  .text-content h2 {
+    font-size: 1.5rem; /* Smaller heading size */
+    margin-bottom: 10px;
+  }
+
+  .text-content p {
+    font-size: 0.875rem; /* Adjust font size for readability */
+    line-height: 1.4;
+  }
+
+  .image-content img {
+    width: 90%; /* Adjust image size */
+    margin: auto; /* Center image */
+  }
+}
+
+/* Adjust image content for smaller mobile devices */
+@media (max-width: 480px) {
+  .text-content h2 {
+    font-size: 1.25rem; /* Further reduce heading size */
+  }
+
+  .text-content p {
+    font-size: 0.75rem; /* Further reduce paragraph size */
+  }
+}
+
+/* Timeline Number (3D Effect) */
+.timeline-number {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff6347; /* Custom accent color */
+  transform: rotate(-15deg); /* Tilting effect */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* 3D shadow effect */
+  z-index: 1; /* Ensures it's on top */
+  background: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* More depth */
+}
+
+
+
+/* Adjust number size for smaller screens */
+@media (max-width: 768px) {
+  .timeline-number {
+    font-size: 1.5rem; /* Decrease font size */
+    padding: 0.25rem 0.5rem; /* Adjust padding */
+    top: -5px; /* Adjust position */
+    left: -5px; /* Adjust position */
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-number {
+    font-size: 1.25rem; /* Further decrease font size */
+    padding: 0.2rem 0.4rem; /* Further adjust padding */
+    top: -3px; /* Adjust position */
+    left: -3px; /* Adjust position */
+  }
+}

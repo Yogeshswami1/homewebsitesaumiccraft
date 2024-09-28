@@ -1,0 +1,128 @@
+.reviews-container {
+  padding: 20px;
+  background-color: #f0f2f5;
+  border-radius: 10px;
+}
+
+.reviews-title {
+  text-align: center;
+  margin-bottom: 16px;
+  font-size: 2rem; /* Adjust font size for different devices */
+}
+
+.reviews-description {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 1rem; /* Adjust font size for different devices */
+  color: #555;
+}
+
+.reviews-carousel {
+  margin-bottom: 20px;
+}
+
+.reviews-carousel .carousel-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5px; /* Reduced padding for less space between images */
+}
+
+.reviews-carousel .carousel-image {
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  max-width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reviews-carousel .carousel-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.video-grid .video-card {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  overflow: hidden;
+}
+
+.video-grid .video-wrapper {
+  position: relative;
+  padding-top: 56.25%; /* Aspect ratio 16:9 */
+  background-color: #000;
+  border-radius: 10px;
+}
+
+.video-grid .video-element {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .reviews-title {
+    font-size: 1.5rem;
+  }
+
+  .reviews-description {
+    font-size: 0.875rem;
+  }
+
+  .reviews-carousel .carousel-image {
+    height: 200px; /* Adjust height for smaller screens */
+  }
+
+  .video-grid .video-wrapper {
+    padding-top: 75%; /* Adjust aspect ratio for smaller screens */
+  }
+
+  .reviews-carousel {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .reviews-title {
+    font-size: 1.75rem;
+  }
+
+  .reviews-description {
+    font-size: 1rem;
+  }
+
+  .reviews-carousel .carousel-image {
+    height: 250px; /* Adjust height for tablets */
+  }
+
+  .video-grid .video-wrapper {
+    padding-top: 60%; /* Adjust aspect ratio for tablets */
+  }
+
+  .reviews-carousel {
+    margin-bottom: 25px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .reviews-title {
+    font-size: 2rem;
+  }
+
+  .reviews-description {
+    font-size: 1.125rem;
+  }
+
+  .reviews-carousel .carousel-image {
+    height: 300px; /* Keep height consistent for larger screens */
+  }
+
+  .reviews-carousel {
+    margin-bottom: 30px;
+  }
+}

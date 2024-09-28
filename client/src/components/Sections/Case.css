@@ -1,0 +1,60 @@
+.case-study-swiper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Center the swiper */
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  z-index: 10;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.swiper-button-prev {
+  left: -60px; /* Place outside video */
+}
+
+.swiper-button-next {
+  right: -60px; /* Place outside video */
+}
+
+.custom-swiper-button::after {
+  font-size: 18px;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.relative {
+  position: relative;
+  overflow: hidden;
+  background-color: black;
+}
+
+@media (max-width: 768px) {
+  /* Adjust arrow positions for mobile */
+  .swiper-button-prev {
+    left: -30px;
+  }
+  
+  .swiper-button-next {
+    right: -30px;
+  }
+}

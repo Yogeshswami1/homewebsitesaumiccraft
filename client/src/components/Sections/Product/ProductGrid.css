@@ -1,0 +1,105 @@
+.gallery {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+}
+
+.row-4 .photo-container, 
+.row-3 .photo-container {
+  flex: 1;
+}
+
+.row-complex {
+  display: flex;
+}
+
+.column-2 {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.small-photo {
+  flex: 1;
+}
+
+.big-photo {
+  flex: 2;
+}
+
+.photo-container {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+
+.photo-title {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.2rem;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.photo-container:hover .photo-title {
+  opacity: 1; /* Show the title on hover */
+}
+
+
+.photo-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease; /* Animation on hover */
+}
+
+.photo-container:hover img {
+  transform: scale(1.1); /* Zoom in on hover */
+}
+
+.hover-btn {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-decoration: none; /* Ensure the button looks like a button */
+}
+
+.photo-container:hover .hover-btn {
+  opacity: 1; /* Show the button on hover */
+}
+
+.hover-btn:hover {
+  background-color: rgba(255, 0, 0, 0.8); /* Red button on hover */
+  color: #fff;
+  padding: 12px 18px; /* Slightly bigger padding on hover */
+  transition: background-color 0.3s ease, padding 0.3s ease; /* Smooth hover transitions */
+}
+
+.section-heading {
+  text-align: center; /* Centers the heading */
+  font-size: 2.5rem; /* Increases the font size */
+  margin: 2rem 0; /* Adds space above and below the heading */
+  font-weight: bold; /* Makes the heading bold */
+  font-family: 'Times New Roman', Times, serif; /* Sets the font to Times New Roman */
+}
+
+
+
