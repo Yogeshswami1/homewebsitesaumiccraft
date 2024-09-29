@@ -77,7 +77,7 @@ const corsOptions = {
 
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Allowed HTTP methods
   allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
-};
+};          
 app.use(cors(corsOptions));
 
 // Serve static files (for serving uploaded images)
