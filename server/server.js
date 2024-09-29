@@ -72,7 +72,7 @@ app.use(bodyParser.json());
 
 // CORS setup
 const corsOptions = {
-  origin: 'https://1backend.saumiccraft.com', // Allow all origins. You can restrict this to specific domains by listing them.
+  origin: 'https://1.saumiccraft.com', // Allow all origins. You can restrict this to specific domains by listing them.
   // origin: 'http://localhost:3000', // Allow all origins. You can restrict this to specific domains by listing them.
 
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Allowed HTTP methods
