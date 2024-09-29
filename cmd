@@ -21,6 +21,8 @@ sudo ln -s /etc/nginx/sites-available/1backend.saumiccraft.com /etc/nginx/sites-
 
 sudo nano /etc/nginx/sites-available/1.saumiccraft.com
 
+sudo nano /etc/nginx/sites-available/1.saumiccraft.com
+
 server {
     listen 80;
     server_name 1.saumiccraft.com;
